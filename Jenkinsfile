@@ -18,6 +18,12 @@ pipeline {
 
 
     stages{
+	
+     stage('Example') {
+		steps {
+			git branch: "${params.branch}", url: 'https://github.com/sandeepkjl/ExternalConfigTest.git'
+			}
+		}
 
         stage('init'){
             steps {
