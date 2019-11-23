@@ -23,7 +23,7 @@ pipeline {
 		
 		stage('deploy'){
             steps {
-                bat 'xcopy ./target/*.jar D:\\jar'
+                bat 'xcopy .\target\*.jar D:\\jar'
 
             }
 
