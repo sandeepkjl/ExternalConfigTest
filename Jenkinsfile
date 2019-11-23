@@ -1,7 +1,7 @@
 pipeline {
     agent any
 	
-	paramaters{
+	parameters{
 		choice(
 			name: 'branch',
 			choices: 'master\ndevops\nfeature',
