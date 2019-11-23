@@ -33,7 +33,7 @@ pipeline {
 
         }
 		
-		stage('init'){
+		stage('build'){
             steps {
                bat 'mvn clean build'
 
