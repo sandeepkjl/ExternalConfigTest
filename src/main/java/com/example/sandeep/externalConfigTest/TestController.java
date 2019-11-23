@@ -13,7 +13,7 @@ public class TestController {
 
     @GetMapping("/findServerName")
     public String getServerName(){
-        System.out.println(envName);
-        return envName;
+        System.out.println("feature branch "+envName);
+        return "feature branch "+envName;
     }
 }
