@@ -23,6 +23,7 @@ pipeline {
                 echo 'intializing.....'
 
             }
+		}
 		stage('print paramtername'){
 			steps{
 				echo "branchName: ${params.branch}"
@@ -42,5 +43,4 @@ pipeline {
 		
         
     }
-}
 }
