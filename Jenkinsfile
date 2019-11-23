@@ -1,5 +1,18 @@
 pipeline {
     agent any
+	
+	paramaters{
+		choice(
+			name: 'branch',
+			choices: 'master\ndevops\nfeature',
+			description: 'choose a branch'
+		)
+		string(
+			name:'UserID',
+			defaultValue:'sk6785',
+			description: 'this is username'
+		)
+	}
 
 
 
@@ -10,6 +23,9 @@ pipeline {
                 echo 'intializing.....'
 
             }
+		stage('print paramtername'){
+				echo "branchName: ${params.branch}"
+				echo "user name: ${params.UserID}"
 
         }
 
