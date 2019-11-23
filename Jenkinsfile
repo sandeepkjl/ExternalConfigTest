@@ -18,6 +18,14 @@ pipeline {
 
 
     stages{
+	
+		stage('Example') {
+		steps {
+			echo "${params.branch}"
+			echo 'example'
+			git branch: "${params.branch}", url: 'https://github.com/sandeepkjl/ExternalConfigTest.git'
+			}
+		}
 
         stage('init'){
             steps {
@@ -35,7 +43,7 @@ pipeline {
 
         stage('build'){
             steps {
-               bat 'mvn clean build'
+               bat 'mvn clean package'
 
             }
 		}
