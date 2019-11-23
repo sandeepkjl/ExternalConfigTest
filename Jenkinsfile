@@ -34,7 +34,7 @@ pipeline {
 
         stage('build'){
             steps {
-               bat 'mvn clean build'
+               bat 'mvn clean package'
 
             }
 		}
