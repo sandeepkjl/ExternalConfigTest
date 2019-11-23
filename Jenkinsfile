@@ -24,8 +24,10 @@ pipeline {
 
             }
 		stage('print paramtername'){
+			steps{
 				echo "branchName: ${params.branch}"
 				echo "user name: ${params.UserID}"
+				}
 
         }
 
@@ -40,4 +42,5 @@ pipeline {
 		
         
     }
+}
 }
