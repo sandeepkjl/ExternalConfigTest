@@ -4,7 +4,7 @@ pipeline {
 	parameters{
 		choice(
 			name: 'branch',
-			choices: 'master\ndevops\nfeature',
+			choices: 'master\nbugfix\nfeature',
 			description: 'choose a branch'
 		)
 		string(
